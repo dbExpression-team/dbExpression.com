@@ -9,27 +9,39 @@
 }
 
 @layer utilities {
-    .token.function {
+    .language-csharp .token.function {
         @apply text-green-300
     }
 
-    .token.punctuation {
+    .language-csharp .token.punctuation {
         @apply text-slate-300
     }
 
-    .token.operator {
+    .language-csharp .token.operator {
         @apply text-slate-300
     }
 
-    .token.keyword {
+    .language-csharp .token.keyword {
         @apply text-sky-500
     }
 
-    .token.plain {
-        @apply text-sky-100
+    .language-csharp .token.plain {
+        @apply text-sky-200
     }
 
-    .token.string {
-        @apply text-violet-300
+    .language-csharp .token.string {
+        @apply text-slate-300
+    }
+
+    .language-sql .token.plain {
+        @apply text-green-300
+    }
+
+    .language-sql .token.keyword {
+        @apply text-sky-500
+    }
+
+    .language-sql .token.string {
+        @apply text-sky-200
     }
 }
