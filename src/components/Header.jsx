@@ -96,7 +96,7 @@ export function Header() {
               <NavLink href="#features">Features</NavLink>
             </div>
             <div className="hidden md:block mr-24">
-              <NavLink href="https://docs.dbexpression.com" alt="Read the Docs">Read the Docs</NavLink>
+              <NavLink href="https://docs.dbexpression.com" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
             </div>
             <div className="hidden md:block">
               <Button href="https://docs.dbexpression.com/Introduction/Getting-Started" target="_blank" color="blue">
