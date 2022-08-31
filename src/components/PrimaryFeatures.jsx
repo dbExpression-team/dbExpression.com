@@ -59,7 +59,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="dbExpression Features"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32 bg-white-100"
+      className="relative overflow-hidden bg-blue-600 pt-14 pb-28 sm:py-20 bg-white-100"
     >
       <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -69,13 +69,10 @@ export function PrimaryFeatures() {
         unoptimized
       />
       <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h1 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+        <div className="max-w-2xl md:mx-auto text-center xl:max-w-none">
+          <h2 className="font-display text-3xl tracking-tight text-white md:text-4xl">
             Compiled SQL. Finally.
-          </h1>
-          <p className="mt-4 text-xl tracking-tight text-slate-400">
-          <strong><span className="text-slate-300">Close the gap</span></strong> between application <strong><span className="text-slate-300">code</span></strong> and native <strong><span className="text-slate-300">SQL</span></strong>. 
-          </p>
+          </h2>
         </div>
         <Tab.Group
           as="div"

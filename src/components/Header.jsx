@@ -92,30 +92,14 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex flex-row flex-row-reverse justify-between p-4">
           <div className="flex gap-x-5 md:gap-x-8">
+          <div className="hidden md:block">
+              <NavLink href="#benefits">Benefits</NavLink>
+            </div>
             <div className="hidden md:block">
               <NavLink href="#features">Features</NavLink>
             </div>
-            <div className="hidden md:block mr-24">
-              <NavLink href="https://docs.dbexpression.com" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
-            </div>
-            <div className="hidden md:block">
-              <Button href="https://docs.dbexpression.com/Introduction/Getting-Started" target="_blank" color="blue">
-                <div className="flex flex-inline align-middle">
-                  <div>
-                    <span>
-                      Get started
-                    </span>
-                  </div>
-                  <div className="pl-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-external-link" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
-                      <line x1="10" y1="14" x2="20" y2="4"></line>
-                      <polyline points="15 4 20 4 20 9"></polyline>
-                    </svg>
-                  </div>
-                </div>
-              </Button>
+            <div className="hidden md:block mr-12">
+              <NavLink href="https://docs.dbexpression.com" alt="Read the Docs" aria-label="Read the Docs">Documentation</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

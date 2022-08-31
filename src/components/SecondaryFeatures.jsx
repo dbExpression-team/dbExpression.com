@@ -5,7 +5,7 @@ const features = [
   {
     id: 'Microsoft SQL Server',
     url: 'https://www.microsoft.com/en-us/sql-server/',
-    summary: 'Use with Microsoft SQL Server 2005+',
+    summary: 'Works with Microsoft SQL Server 2005+',
     description: 'dbExpression was created to simplify applications using Microsoft SQL Server.',
     icon: function SqlServerIcon() {
       return (
@@ -113,34 +113,27 @@ export function SecondaryFeatures() {
       className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
     >
       <Container>
-        <div className="mx-auto max-w-3xl md:text-center mb-20">
+        <div className="mx-auto max-w-3xl text-center mb-20">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Microsoft SQL Server. Simplified.
           </h2>
-          <div className="mt-12 text-xl tracking-tight text-slate-700">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24">
-              <h3>increase team productivity</h3>
-              <h3>reduce runtime exceptions</h3>
-              <h3>concentrate on the important stuff</h3>
-            </div>
-          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 md:mx-20 lg:mx-40">
-          {features.map((feature) => (
-            <div className="mb-10" key={feature.id}>
-              <div className="w-12 h-12 rounded-lg">
-                <Link href={feature.url} alt={feature.summary}>
-                  <svg className="h-10 w-10 py-1 px-1 hover:h-11 hover:w-11 hover:py-0 hover:px-0" fill="none">
-                    <feature.icon />
-                  </svg>
-                </Link>
-              </div>
-              <h3 className="mt-8 font-display text-xl text-slate-900">
-                {feature.summary}
-              </h3>
-              <p className="mt-4 text-sm text-slate-600">
-                {feature.description}
-              </p>
+        <div className="grid grid-rows-1 xl:grid-cols-4 gap-x-24 mx-8 md:mx-16 lg:mx-24">
+        {features.map((feature) => (
+            <div className="flex flex-col gap-y-6 pb-24 lg:pb-0">
+                <div className="flex justify-center" key={feature.id}>
+                  <Link href={feature.url} alt={feature.summary}>
+                    <svg className="h-12 w-12 py-1 px-1 hover:h-13 hover:w-13 hover:py-0 hover:px-0" fill="none">
+                      <feature.icon />
+                    </svg>
+                  </Link>
+                </div>
+                <h3 className="lg:pt-8 font-display text-xl lg:text-2xl text-slate-900 text-center h-12">
+                    <span className="inline-block align-text-top">{feature.summary}</span>
+                </h3>
+                <div className="lg:pt-8 text-base lg:text-lg text-slate-600 text-center lg:mt-24 xl:mt-8">
+                    {feature.description}
+                </div>
             </div>
           ))
           }
