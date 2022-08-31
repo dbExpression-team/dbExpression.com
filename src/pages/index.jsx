@@ -16,8 +16,8 @@ export default function Home() {
           name="description"
           content="dbExpression closes the gap between application code and native SQL, bringing Microsoft SQL Server functionality into .NET."
         />
-        <Script key="ga-script" strategy='lazyOnLoad' src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`} />
-        <Script key="ga-script-local" strategy='lazyOnLoad'>
+        <Script key="ga-script" strategy='afterInteractive' src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`} />
+        <Script key="ga-script-local" strategy='afterInteractive'>
           {
             `
             window.dataLayer = window.dataLayer || [];
