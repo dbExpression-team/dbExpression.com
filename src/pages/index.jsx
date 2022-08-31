@@ -24,7 +24,7 @@ export default function Home() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
-            gtag('config', 'G-5E8SMEDZT3');
+            gtag('config', ${process.env.GOOGLE_ANALYTICS_ID});
             `
           }
         </Script>
