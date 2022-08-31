@@ -58,8 +58,8 @@ export function Benefits() {
       <Container>
         <div className="grid grid-rows-1 lg:grid-cols-3 gap-x-24 mx-8 md:mx-16 lg:mx-24">
         {features.map((feature) => (
-            <div className="flex flex-col gap-y-6 pb-24 lg:pb-0">
-                <div className="flex justify-center" key={feature.id}>
+            <div key={feature.id} className="flex flex-col gap-y-6 pb-24 lg:pb-0">
+                <div className="flex justify-center">
                     <div className="w-12 h-12 rounded-lg">
                         <feature.icon />
                     </div>

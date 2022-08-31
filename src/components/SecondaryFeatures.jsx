@@ -120,8 +120,8 @@ export function SecondaryFeatures() {
         </div>
         <div className="grid grid-rows-1 xl:grid-cols-4 gap-x-24 mx-8 md:mx-16 lg:mx-24">
         {features.map((feature) => (
-            <div className="flex flex-col gap-y-6 pb-24 lg:pb-0">
-                <div className="flex justify-center" key={feature.id}>
+            <div  key={feature.id} className="flex flex-col gap-y-6 pb-24 lg:pb-0">
+                <div className="flex justify-center">
                   <Link href={feature.url} alt={feature.summary}>
                     <svg className="h-12 w-12 py-1 px-1 hover:h-13 hover:w-13 hover:py-0 hover:px-0" fill="none">
                       <feature.icon />
