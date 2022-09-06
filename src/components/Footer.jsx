@@ -12,7 +12,7 @@ export function Footer() {
           <Logo className="mx-auto w-auto" width="200" height="200" />
         </div>
         <div className="flex flex-grow justify-center pb-4 md:pb-8">
-            <Button href="https://docs.dbexpression.com/Introduction/Getting-Started" target="_blank" color="blue">
+            <Button href="https://docs.dbexpression.com/introduction/getting-started" target="_blank" color="blue">
               <div className="flex flex-inline align-middle">
                 <div>
                   <span>

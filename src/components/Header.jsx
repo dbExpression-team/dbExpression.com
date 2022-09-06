@@ -78,7 +78,7 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="https://docs.dbexpression.com">Read the Docs</MobileNavLink>
-            <MobileNavLink href="https://docs.dbexpression.com/Introduction/Getting-Started">Get Started</MobileNavLink>
+            <MobileNavLink href="https://docs.dbexpression.com/introduction/getting-started">Get Started</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>

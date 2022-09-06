@@ -72,7 +72,7 @@ export function Hero() {
                 <span className="text-slate-300">Close the gap</span> between application <span className="text-slate-300">code</span> and native <span className="text-slate-300">SQL</span>. 
               </p>
               <div className="mt-8 flex gap-4 justify-center">
-                <Button href="https://docs.dbexpression.com/Introduction/Getting-Started" color="blue" target="_blank">
+                <Button href="https://docs.dbexpression.com/introduction/getting-started" color="blue" target="_blank">
                   <div className="flex flex-inline align-middle">
                     <div>
                       <span>
