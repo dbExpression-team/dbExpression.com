@@ -69,7 +69,7 @@ export function Hero() {
                 Microsoft SQL Server. Simplified.
               </h1>
               <p className="mt-6 text-xl tracking-tight text-slate-400">
-                <span className="text-slate-300">Close the gap</span> between application <span className="text-slate-300">code</span> and native <span className="text-slate-300">SQL</span>. 
+                <span className="text-slate-300">Close the gap</span> between native <span className="text-slate-300">SQL</span> and application <span className="text-slate-300">code</span>. 
               </p>
               <div className="mt-8 flex gap-4 justify-center">
                 <Button href="https://docs.dbexpression.com/introduction/getting-started" color="blue" target="_blank">
