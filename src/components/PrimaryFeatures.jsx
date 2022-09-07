@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import fluentSqlStatement from '@/images/screenshots/fluent-sql-statements.gif'
 import intellisenseWithDatabaseAttributes from '@/images/screenshots/intellisense-with-database-attributes.png'
-import wysiwyg from '@/images/screenshots/extensible-and-configurable.png'
+import extensible from '@/images/screenshots/extensible-and-configurable.png'
 import workflow from '@/images/screenshots/workflow.gif'
 import backgroundImage from '@/images/features.jpg'
 
@@ -31,7 +31,7 @@ const features = [
   },
   {
     title: 'Extensible',
-    image: wysiwyg,
+    image: extensible,
     description:
       "Extensible by design, configurable to your needs."
   },

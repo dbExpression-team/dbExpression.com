@@ -55,7 +55,7 @@ const features = [
     id: 'NET',
     url: 'https://dotnet.microsoft.com/en-us/',
     summary: 'Created for Microsoft .NET',
-    description: 'dbExpression works with any project targeting .NET Standard 2.0 or higher.  dbExpression will work as well with .NET Framework 4.6 as it does with .NET 7.',
+    description: 'dbExpression works with any project targeting .NET Standard 2.0 or higher.  dbExpression works with .NET Framework and .NET Core.',
     icon: function NETIcon() {
       return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456 456" fill="none">
@@ -72,7 +72,7 @@ const features = [
     id: 'NuGet',
     url: 'https://www.nuget.org/packages/HatTrick.DbEx.MsSql',
     summary: 'Packages on NuGet',
-    description: 'dbExpression is quick and easy to get up and running using packages available on NuGet.',
+    description: 'dbExpression is quick and easy to get up and running using a couple of packages and a dotnet tool - all available on NuGet.',
     icon: function NuGetIcon() {
       return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" version="1.1">
