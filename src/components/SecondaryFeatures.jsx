@@ -71,7 +71,7 @@ const features = [
   {
     id: 'NuGet',
     url: 'https://www.nuget.org/packages/HatTrick.DbEx.MsSql',
-    summary: 'Packages on NuGet',
+    summary: 'Available from NuGet',
     description: 'dbExpression is quick and easy to get up and running using a couple of packages and a dotnet tool - all available on NuGet.',
     icon: function NuGetIcon() {
       return (
