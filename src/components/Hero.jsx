@@ -44,7 +44,7 @@ export function Hero() {
   return (
     <Container className="overflow-hidden bg-slate-900 dark:-mb-12 dark:mt-[-4.5rem] dark:pb-12 dark:pt-[4.5rem] dark:lg:mt-[-4.75rem] dark:lg:pt-[4.75rem]">
       <div className="py-8 sm:px-2 lg:relative lg:py-12 lg:px-0">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 justify-center gap-y-16 gap-x-8 px-4 lg:max-w-8xl lg:grid-cols-7 lg:px-8 xl:gap-x-16 xl:px-12">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 justify-center gap-y-16 lg:gap-x-8 px-4 lg:max-w-8xl lg:grid-cols-7 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left col-span-2">
             <Image
               className="absolute bottom-full right-full -mr-80 -mb-64 opacity-50 border-0"
@@ -56,7 +56,7 @@ export function Hero() {
               priority
             />
             <Image
-              className="border-0"
+              className="border-0 mx-auto"
               src={dbExpressionImage}
               alt="dbExpression"
               width={530}
@@ -65,11 +65,11 @@ export function Hero() {
               priority
             />
             <div className="relative width text-center mt-10">			  
-              <h1 className="font-display text-xl tracking-tight text-slate-200 sm:text-2xl md:text-3xl">
+              <h1 className="font-display text-xl tracking-tight text-slate-200 text-3xl md:text-3xl">
                 Microsoft SQL Server. Simplified.
               </h1>
-              <p className="mt-6 text-xl tracking-tight text-slate-400">
-                <span className="text-slate-300">Close the gap</span> between application <span className="text-slate-300">code</span> and native <span className="text-slate-300">SQL</span>. 
+              <p className="mt-6 text-lg md:text-xl tracking-tight text-slate-300">
+                Close the gap between native SQL and application code. 
               </p>
               <div className="mt-8 flex gap-4 justify-center">
                 <Button href="https://docs.dbexpression.com/introduction/getting-started" color="blue" target="_blank">
