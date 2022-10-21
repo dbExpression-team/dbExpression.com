@@ -11,7 +11,7 @@ module.exports = {
         },
         {
           userAgent: '*',
-          disallow: ['/docs/reference/statements' ],
+          disallow: ['/docs/reference/statements', '/docs/about' ],
         }
       ],
       additionalSitemaps: [
