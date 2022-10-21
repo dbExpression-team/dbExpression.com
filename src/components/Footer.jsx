@@ -12,23 +12,7 @@ export function Footer() {
           <Logo className="mx-auto w-auto" width="200" height="200" />
         </div>
         <div className="flex flex-grow justify-center pb-4 md:pb-8">
-            <Button href="https://docs.dbexpression.com/introduction/getting-started" target="_blank" color="blue">
-              <div className="flex flex-inline align-middle">
-                <div>
-                  <span>
-                    Get started
-                  </span>
-                </div>
-                <div className="pl-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-external-link" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
-                    <line x1="10" y1="14" x2="20" y2="4"></line>
-                    <polyline points="15 4 20 4 20 9"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </Button>
+            <Button href="/docs" color="blue">Get started</Button>
           </div>
         <div className="grid grid-cols-2 items-center border-t border-slate-400/10 py-4 sm:flex-row sm:justify-between">
           <div>
@@ -39,13 +23,13 @@ export function Footer() {
           </div>
           <div className="flex justify-end">
             <div className="hidden md:block">
-              <NavLink href="#benefits" className="hover:text-slate-800">Benefits</NavLink>
+              <NavLink href="#benefits" className="hover:text-slate-800">Why dbExpression?</NavLink>
             </div>
             <div className="hidden md:block">
-              <NavLink href="#features" className="hover:text-slate-800">Features</NavLink>
+              <NavLink href="#features" className="hover:text-slate-800">How will it help me?</NavLink>
             </div>
             <div className="hidden md:block">
-              <NavLink href="https://docs.dbexpression.com" className="hover:text-slate-800" alt="Read the Docs" aria-label="Read the Docs">Documentation</NavLink>
+              <NavLink href="https://docs.dbexpression.com" className="hover:text-slate-800" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
             </div>
             <div className="ml-12">
               <Link

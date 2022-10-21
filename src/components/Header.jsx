@@ -77,8 +77,8 @@ function MobileNavigation() {
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="https://docs.dbexpression.com">Read the Docs</MobileNavLink>
-            <MobileNavLink href="https://docs.dbexpression.com/introduction/getting-started">Get Started</MobileNavLink>
+            <MobileNavLink href="/docs">Read the Docs</MobileNavLink>
+            <MobileNavLink href="/docs">Get Started</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -93,13 +93,13 @@ export function Header() {
         <nav className="relative z-50 flex flex-row flex-row-reverse justify-between p-4">
           <div className="flex gap-x-5 md:gap-x-8">
           <div className="hidden md:block">
-              <NavLink href="#benefits">Benefits</NavLink>
+              <NavLink href="#benefits">Why dbExpression?</NavLink>
             </div>
             <div className="hidden md:block">
-              <NavLink href="#features">Features</NavLink>
+              <NavLink href="#features">How will it help me?</NavLink>
             </div>
             <div className="hidden md:block mr-12">
-              <NavLink href="https://docs.dbexpression.com" alt="Read the Docs" aria-label="Read the Docs">Documentation</NavLink>
+              <NavLink href="/docs" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

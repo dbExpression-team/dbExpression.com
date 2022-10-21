@@ -31,6 +31,8 @@ export default function Document(props) {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <meta property="og:image" content="https://dbexpressionpublic.blob.core.windows.net/web/dbex-og.png" />
+        <meta property="twitter:image" content="https://dbexpressionpublic.blob.core.windows.net/web/dbex-twitter.png" />
         <link rel="icon" type="image/png" sizes="16x16" href={faviconHref.concat("favicon-16x16.png")} />
         <link rel="icon" type="image/png" sizes="32x32" href={faviconHref.concat("favicon-32x32.png")} />
         <link rel="icon" type="image/png"  sizes="48x48" href={faviconHref.concat("favicon-48x48.png")} />

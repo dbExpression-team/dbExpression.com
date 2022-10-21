@@ -72,23 +72,7 @@ export function Hero() {
                 Close the gap between native SQL and application code. 
               </p>
               <div className="mt-8 flex gap-4 justify-center">
-                <Button href="https://docs.dbexpression.com/introduction/getting-started" color="blue" target="_blank">
-                  <div className="flex flex-inline align-middle">
-                    <div>
-                      <span>
-                        Get started
-                      </span>
-                    </div>
-                    <div className="pl-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-external-link" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
-                        <line x1="10" y1="14" x2="20" y2="4"></line>
-                        <polyline points="15 4 20 4 20 9"></polyline>
-                      </svg>
-                    </div>
-                  </div>
-                </Button>
+                <Button href="/docs" color="blue">Get started</Button>
                 <Button className="hidden sm:visible" href="https://github.com/HatTrickLabs/dbExpression" variant="outline" color="white" target="_blank">
                   <div className="flex flex-inline align-middle">
                     <div>

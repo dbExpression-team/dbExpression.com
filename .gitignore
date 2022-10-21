@@ -35,3 +35,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# mac
+.db
+
+# sitemap
+public/sitemap.xml
+public/robots.txt
