@@ -12,7 +12,7 @@ import backgroundImage from '@/images/features.jpg'
 
 const features = [
   {
-    title: 'Fluent',
+    title: 'Fluent SQL',
     image: fluentSqlStatement,
     description:
       "Author strongly-typed SQL queries in code using a guided and fluent syntax.",

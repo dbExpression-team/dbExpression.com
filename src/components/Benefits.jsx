@@ -88,7 +88,7 @@ const features = [
     summary: 'It just works',
     description: function _() {
         return (
-            <p>dbExpression manages an <strong>intuitive API of your database</strong>, backed by a solid framework.  You get to work on other things and <strong>not worry about your ORM</strong>.</p>
+            <p>dbExpression manages an <strong>intuitive API of your database</strong>, backed by a solid framework.  You get to work on other things and <strong>not worry about your .NET ORM</strong>.</p>
         )
     },
     icon: function _() {

@@ -11,9 +11,12 @@ export function Footer() {
         <div className="flex justify-center">
           <Logo className="mx-auto w-auto" width="200" height="200" />
         </div>
-        <div className="flex flex-grow justify-center pb-4 md:pb-8">
+        <div className="flex flex-grow justify-center -mt-8 pb-12 md:pb-16">
+            <p className="text-base font-medium text-slate-600 text-center"><span className="pr-4">Fluent SQL</span>|<span className="pl-4">.NET ORM</span></p>
+        </div>
+        <div className="flex flex-grow justify-center pb-12 md:pb-16">
             <Button href="/docs" color="blue">Get started</Button>
-          </div>
+        </div>
         <div className="grid grid-cols-2 items-center border-t border-slate-400/10 py-4 sm:flex-row sm:justify-between">
           <div>
             <p className="mt-6 text-sm text-slate-500 sm:mt-0">
