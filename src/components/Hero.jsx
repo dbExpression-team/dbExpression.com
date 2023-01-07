@@ -27,7 +27,7 @@ const code = `var rockstar = db.SelectOne(
 	.InnerJoin(dbo.Project).On(dbo.Employee.Id == dbo.Project.PrimaryEngineerId)
     .Where(dbo.Project.PeerReviewScore == PeerReviewScore.ExceededExpectations)
 	.GroupBy(dbo.Project.PrimaryEngineerId)
-	.OrderBy(db.fx.Count(dbo.PrimaryEngineerId.Id).Desc);
+	.OrderBy(db.fx.Count(dbo.PrimaryEngineerId.Id).Desc());
 	
 var you = await rockstar.ExecuteAsync();`
 
