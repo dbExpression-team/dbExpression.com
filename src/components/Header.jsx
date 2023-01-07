@@ -88,7 +88,7 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className='bg-slate-900'>
+    <header className='bg-transparent border border-b dark:border-b-none'>
       <Container>
         <nav className="relative z-50 flex flex-row flex-row-reverse justify-between p-4">
           <div className="flex gap-x-5 md:gap-x-8">

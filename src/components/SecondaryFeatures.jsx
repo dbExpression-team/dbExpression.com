@@ -97,9 +97,9 @@ const features = [
     url: 'https://github.com/HatTrickLabs/dbExpression',
     summary: 'Source on GitHub',
     description: 'dbExpression is open source under the Apache 2.0 license.',
-    icon: function NuGetIcon() {
+    icon: function GithubIcon() {
       return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="rgb(0, 0, 0)" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill='black' d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
       )
     },
   },
@@ -110,28 +110,28 @@ export function SecondaryFeatures() {
     <section
       id="secondary-features"
       aria-label="Features for simplifying Microsoft SQL Server"
-      className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
+      className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32 dark:bg-slate-900"
     >
       <Container>
         <div className="mx-auto max-w-3xl text-center mb-20">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Microsoft SQL Server. Simplified.
           </h2>
         </div>
-        <div className="grid grid-rows-1 xl:grid-cols-4 gap-x-24 mx-8 md:mx-16 lg:mx-24">
+        <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-4 gap-16 mx-8 md:mx-16 lg:mx-24">
         {features.map((feature) => (
-            <div  key={feature.id} className="flex flex-col gap-y-6 pb-24 lg:pb-0">
-                <div className="flex justify-center">
-                  <Link href={feature.url} alt={feature.summary}>
+            <div  key={feature.id} className="flex flex-col gap-y-6 pb-24 lg:pb-0 rounded-xl dark:bg-blue-900 shadow-lg shadow-blue-900/20 dark:ring-2 dark:ring-inset dark:ring-white/20">
+                <div className="flex justify-center p-8 dark:bg-white/90 rounded-t-xl">
+                  <Link href={feature.url} alt={feature.summary} className=''>
                     <svg className="h-12 w-12 py-1 px-1 hover:h-13 hover:w-13 hover:py-0 hover:px-0" fill="none">
                       <feature.icon />
                     </svg>
                   </Link>
                 </div>
-                <h3 className="lg:pt-8 font-display text-xl lg:text-2xl text-slate-900 text-center h-12">
+                <h3 className="p-8 font-display text-xl lg:text-2xl text-slate-900 dark:text-white text-center h-12">
                     <span className="inline-block align-text-top">{feature.summary}</span>
                 </h3>
-                <div className="lg:pt-8 text-base lg:text-lg text-slate-600 text-center lg:mt-24 xl:mt-8">
+                <div className="p-8 text-base text-lg text-slate-600 dark:text-slate-300 text-center lg:mt-24 xl:mt-8">
                     {feature.description}
                 </div>
             </div>

@@ -6,16 +6,19 @@ import { Button } from '@/components/Button'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="bg-slate-50 dark:bg-slate-900 pt-12">
       <Container>
-        <div className="flex justify-center">
+        <div className="flex justify-center dark:hidden">
           <Logo className="mx-auto w-auto" width="200" height="200" />
         </div>
-        <div className="flex flex-grow justify-center -mt-8 pb-12 md:pb-16">
-            <p className="text-base font-medium text-slate-600 text-center"><span className="pr-4">Fluent SQL</span>|<span className="pl-4">.NET ORM</span></p>
+        <div className="flex hidden dark:block">
+            <Logo className="mx-auto w-auto" width="200" height="200" isDark="true" />
+        </div>
+        <div className="flex flex-grow justify-center mt-8 pb-12 md:pb-16">
+            <p className="text-base font-medium text-slate-600 dark:text-slate-300 text-center"><span className="pr-4">Fluent SQL</span>|<span className="pl-4">.NET ORM</span></p>
         </div>
         <div className="flex flex-grow justify-center pb-12 md:pb-16">
-            <Button href="/docs" color="blue">Get started</Button>
+          <Button href="/docs" color="blue" className="rounded-md"><span className='p-1 text-lg'>Get started</span></Button>
         </div>
         <div className="grid grid-cols-2 items-center border-t border-slate-400/10 py-4 sm:flex-row sm:justify-between">
           <div>

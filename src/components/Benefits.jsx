@@ -9,8 +9,9 @@ import { ArrowPathRoundedSquareIcon } from '@heroicons/react/24/outline'
 import { FaceSmileIcon } from '@heroicons/react/24/outline'
 import { PencilSquareIcon } from '@heroicons/react/24/outline'
 import { CodeBracketIcon } from '@heroicons/react/24/outline'
+import clsx from 'clsx'
 
-const iconClassName = "h-12 w-12 text-sky-900";
+const iconClassName = "h-12 w-12";
 
 const features = [
   {
@@ -23,9 +24,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <ArrowPathRoundedSquareIcon className={iconClassName}/>
+        <ArrowPathRoundedSquareIcon className={clsx(iconClassName, 'text-violet-600 dark:text-purple-300 opacity-80')}/>
       )
     },
+    textColor: 'text-violet-700 dark:text-purple-300 opacity-80'
   },
   {
     id: 'refactor',
@@ -37,9 +39,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <FaceSmileIcon className={iconClassName}/>
+        <FaceSmileIcon className={clsx(iconClassName, 'text-sky-600 dark:text-sky-300 opacity-80')}/>
       )
     },
+    textColor: 'text-sky-700 dark:text-sky-300 opacity-80',
   },
   {
     id: 'runtime',
@@ -51,9 +54,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <ArrowTrendingDownIcon className={iconClassName}/>
+        <ArrowTrendingDownIcon className={clsx(iconClassName, 'text-pink-600 dark:text-pink-300 opacity-80')}/>
       )
     },
+    textColor: 'text-pink-700 dark:text-pink-300 opacity-80',
   },  
   {
     id: 'teams',
@@ -65,9 +69,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <UserGroupIcon className={iconClassName}/>
+        <UserGroupIcon className={clsx(iconClassName, 'text-sky-600 dark:text-sky-300 opacity-80')}/>
       )
     },
+    textColor: 'text-sky-700 dark:text-sky-300 opacity-80',
   },
   {
     id: 'source control',
@@ -79,9 +84,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <CodeBracketIcon className={iconClassName}/>
+        <CodeBracketIcon className={clsx(iconClassName, 'text-pink-600 dark:text-pink-300 opacity-80')}/>
       )
     },
+    textColor: 'text-pink-700 dark:text-pink-300 opacity-80',
   },
   {
     id: 'work',
@@ -93,9 +99,10 @@ const features = [
     },
     icon: function _() {
         return (
-            <Cog6ToothIcon className={iconClassName}/>
+            <Cog6ToothIcon className={clsx(iconClassName, 'text-violet-600 dark:text-purple-300 opacity-80')}/>
           )
     },
+    textColor: 'text-violet-700 dark:text-purple-300 opacity-80',
   }
 ]
 
@@ -104,22 +111,26 @@ export function Benefits() {
     <section
       id="benefits"
       aria-label="Benefits to using dbExpression"
-      className="pt-20 sm:pt-32"
+      className="pt-20 sm:pt-32 dark:bg-slate-900"
     >
       <Container>
-        <div className="grid grid-rows-1 lg:grid-cols-3 gap-x-24 mx-8 md:mx-16 lg:mx-24">
-        {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col gap-y-6 pb-14 sm:pb-20 lg:pb-32">
-                <div className="flex justify-center">
-                    <div className="w-12 h-12 rounded-lg">
-                        <feature.icon />
+        <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 mx-8 md:mx-16 xl:mx-24 pb-24">
+        {features.map((feature, idx) => (
+            <div key={feature.id} className={clsx(idx % 2 == 0 ? 'bg-gradient-to-br' : 'bg-gradient-to-tl', idx > 2 ? 'xl:bg-gradient-to-tr' : 'xl:bg-gradient-to-bl', 'rounded-2xl shadow-lg shadow-blue-900/20 from-emerald-200/80 via-pink-400/80 to-sky-400/80 dark:from-emerald-100 dark:via-pink-300 dark:to-sky-400 flex flex-col gap-y-6')}>
+               <div className='rounded-2xl bg-white dark:bg-blue-900 opacity-15 m-0.5 h-full'>
+                  <div className='p-16'>
+                    <div className="flex justify-center">
+                      <div className="w-12 h-12">
+                          <feature.icon />
+                      </div>
                     </div>
-                </div>
-                <h3 className="lg:pt-8 font-display text-lg lg:text-2xl text-sky-900 text-center">
-                    <span className="inline-block align-text-top">{feature.summary}</span>
-                </h3>
-                <div className="lg:pt-8 text-base lg:text-lg text-slate-600 text-center">
-                    <feature.description />
+                    <h3 className="md:pt-6 lg:pt-12 font-display text-2xl text-sky-900 text-center">
+                      <span className={clsx('inline-block align-text-top', feature.textColor)}>{feature.summary}</span>
+                    </h3>
+                    <div className="md:pt-6 lg:pt-12 text-base text-lg text-slate-600 dark:text-slate-300 text-center">
+                      <feature.description />
+                    </div>
+                  </div>
                 </div>
             </div>
           ))
