@@ -4,6 +4,7 @@
 @import './slider.css';
 @import './fonts.css';
 @import './prism.css';
+@import './app.css';
 
 #__next {
   min-height: 100%;

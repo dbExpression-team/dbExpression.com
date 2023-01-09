@@ -21,13 +21,13 @@ const features = [
   {
      title: 'Intellisense',
      image: intellisenseWithDatabaseAttributes,
-     description: 'See column names, column data types, table indexes, and many more in intellisense - no need to switch to another view.',
+     description: 'See database names, data types, indexes, and many more in intellisense - no need to switch to another view.',
      timeToRead: 8
    },
    {
      title: 'Seamless workflow',
      image: workflow,
-     description: 'Make database changes, regenerate code using the dbExpression dotnet tool, and immediately see the impact from the compiler.',
+     description: 'Make database changes, regenerate code, and immediately see the impact from the compiler.',
      timeToRead: 12
    },
    {
@@ -45,8 +45,10 @@ export function PrimaryFeatures() {
       aria-label='dbExpression Features'
       className='relative dark:bg-slate-900 pt-14 pb-28 sm:py-20 bg-white-100'
     >     
+    <div className='swiper-container dark:swiper-container-dark px-8'>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={10}
+        slidesPerView={1.1}
         centeredSlides={true}
         autoplay={{
           disableOnInteraction: true,
@@ -54,21 +56,21 @@ export function PrimaryFeatures() {
         pagination={{
           clickable: true,          
         }}
-        navigation={false}
+        navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className='swiper h-full w-full'
       >
         {features.map((feature) => (
             <SwiperSlide 
-              key={feature.title} className='py-16 bg-white dark:bg-slate-900 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white to-sky-50 dark:from-sky-500 dark:via-sky-900 dark:to-slate-900' 
+              key={feature.title} className='py-16 bg-white dark:bg-slate-900' 
               data-swiper-autoplay={feature.timeToRead * 1000}
             >
-              <div className='text-center bg-white dark:bg-transparent shadow-lg shadow-blue-900/20 rounded-lg dark:shadow-none'>
+              <div className='text-center w-full justify-center bg-white dark:bg-transparent shadow-lg shadow-blue-900/20 rounded-lg dark:shadow-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900'>
                 <h2 className='pt-12 font-display text-3xl tracking-tight text-slate-700 dark:text-white md:text-4xl'><span>{feature.title}</span></h2>
-                <div className='py-6 lg:py-12 text-xl text-lg text-slate-600 dark:text-slate-300 text-center'><span>{feature.description}</span></div>
-                <div className='h-[calc(40vh-80px)] xl:h-[calc(75vh-128px)] w-full'>
+                <div className='h-56 md:h-32 lg:h-36 px-8 md:px-24 lg:px-36 py-6 md:py-8 lg:py-12 text-xl text-lg text-slate-600 dark:text-slate-300 text-center'>{feature.description}</div>
+                <div className='h-[calc(40vh-80px)] xl:h-[calc(75vh-128px)]'>
                   <Image
-                    className='rounded-b-lg dark:rounded-lg block object-cover'
+                    className='rounded-b-lg dark:rounded-lg object-left'
                     src={feature.image}
                     alt=''
                     priority                    
@@ -78,6 +80,7 @@ export function PrimaryFeatures() {
             </SwiperSlide> 
           ))}
       </Swiper>
+      </div>
     </section>
   )
 }
