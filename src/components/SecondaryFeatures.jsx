@@ -110,7 +110,7 @@ export function SecondaryFeatures() {
     <section
       id="secondary-features"
       aria-label="Features for simplifying Microsoft SQL Server"
-      className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32 dark:bg-slate-900"
+      className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32 bg-white dark:bg-slate-900"
     >
       <Container>
         <div className="mx-auto max-w-3xl text-center mb-20">
@@ -120,7 +120,7 @@ export function SecondaryFeatures() {
         </div>
         <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-4 gap-16 mx-8 md:mx-16 lg:mx-24">
         {features.map((feature) => (
-            <div  key={feature.id} className="flex flex-col gap-y-6 pb-24 lg:pb-0 rounded-xl dark:bg-blue-900 shadow-lg shadow-blue-900/20 dark:ring-2 dark:ring-inset dark:ring-white/20">
+            <div key={feature.id} className="flex flex-col gap-y-6 pb-24 lg:pb-0 rounded-xl bg-white dark:bg-blue-900 shadow-lg shadow-blue-900/20 dark:ring-2 dark:ring-inset dark:ring-white/20">
                 <div className="flex justify-center p-8 dark:bg-white/90 rounded-t-xl">
                   <Link href={feature.url} alt={feature.summary} className=''>
                     <svg className="h-12 w-12 py-1 px-1 hover:h-13 hover:w-13 hover:py-0 hover:px-0" fill="none">

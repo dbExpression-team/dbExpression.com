@@ -92,7 +92,7 @@ export function Hero() {
             </div>
             <div className="relative">
               <Image
-                className="absolute -top-64 -right-64 border-0"
+                className="absolute hidden lg:visible -top-64 -right-64 border-0"
                 src={blurCyanImage}
                 alt=""
                 width={530}
@@ -101,7 +101,7 @@ export function Hero() {
                 priority
               />
               <Image
-                className="absolute -bottom-40 -right-44 border-0"
+                className="absolute hidden lg:visible -bottom-40 -right-44 border-0"
                 src={blurIndigoImage}
                 alt=""
                 width={567}

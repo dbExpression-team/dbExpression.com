@@ -1,8 +1,9 @@
 @import 'tailwindcss/base';
-@import './fonts.css';
-@import './prism.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import './slider.css';
+@import './fonts.css';
+@import './prism.css';
 
 #__next {
   min-height: 100%;

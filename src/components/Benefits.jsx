@@ -111,7 +111,7 @@ export function Benefits() {
     <section
       id="benefits"
       aria-label="Benefits to using dbExpression"
-      className="pt-20 sm:pt-32 dark:bg-slate-900"
+      className="pt-20 sm:pt-32 bg-white dark:bg-slate-900"
     >
       <Container>
         <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 mx-8 md:mx-16 xl:mx-24 pb-24">
@@ -124,9 +124,9 @@ export function Benefits() {
                           <feature.icon />
                       </div>
                     </div>
-                    <h3 className="md:pt-6 lg:pt-12 font-display text-2xl text-sky-900 text-center">
+                    <h2 className="py-6 lg:pt-12 font-display text-2xl text-sky-900 text-center">
                       <span className={clsx('inline-block align-text-top', feature.textColor)}>{feature.summary}</span>
-                    </h3>
+                    </h2>
                     <div className="md:pt-6 lg:pt-12 text-base text-lg text-slate-600 dark:text-slate-300 text-center">
                       <feature.description />
                     </div>
