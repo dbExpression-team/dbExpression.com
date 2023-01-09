@@ -42,7 +42,7 @@ export default function Document(props) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@400;500&display=swap"
         />
       </Head>
-      <body className="flex h-full flex-col bg-white-50 dark:bg-slate-900">
+      <body className="flex h-full flex-col bg-white dark:bg-slate-900">
         <Main />
         <NextScript />
       </body>

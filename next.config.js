@@ -5,10 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     newNextLinkBehavior: true,
-    scrollRestoration: true,
-    images: {
-      allowFutureImage: true,
-    },
+    scrollRestoration: true
   },
   async redirects() {
     return [
