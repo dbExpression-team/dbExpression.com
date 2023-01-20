@@ -43,9 +43,9 @@ function TrafficLightsIcon(props) {
 
 export function Hero() {
   return (
-    <Container className="overflow-hidden bg-sky-50 dark:bg-slate-900 dark:-mb-12 dark:mt-[-4.5rem] dark:pb-12 dark:pt-[4.5rem] dark:lg:mt-[-4.75rem] dark:lg:pt-[4.75rem]">
+    <div className="overflow-hidden bg-sky-50 dark:bg-slate-900 dark:-mb-12 dark:mt-[-4.5rem] dark:pb-12 dark:pt-[4.5rem] dark:lg:mt-[-4.75rem] dark:lg:pt-[4.75rem]">
       <div className="py-8 sm:px-2 lg:relative lg:py-12 lg:px-0">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 justify-center gap-y-16 lg:gap-x-8 px-4 lg:max-w-8xl lg:grid-cols-7 lg:px-8 xl:gap-x-16 xl:px-12">
+        <div className="mx-auto grid max-w-screen-2xl grid-cols-1 justify-center gap-y-16 lg:gap-x-8 px-4 lg:max-w-8xl lg:grid-cols-7 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left col-span-2">
             <Image
               className="absolute bottom-full right-full -mr-80 -mb-64 opacity-50 border-0"
@@ -75,14 +75,14 @@ export function Hero() {
               priority
             />
             <div className="relative width text-center mt-10">			  
-              <h1 className="font-display text-xl tracking-tight text-slate-700 dark:text-slate-200 text-3xl md:text-3xl">
+              <h1 className="font-display text-2xl tracking-tight text-slate-700 dark:text-slate-200 md:text-3xl">
                 Microsoft SQL Server. Simplified.
               </h1>
-              <p className="mt-6 text-lg md:text-xl tracking-tight text-slate-800 dark:text-slate-300">
+              <p className="mt-6 text-lg md:text-xl tracking-tight text-slate-800/80 dark:text-slate-300">
                 Close the gap between native SQL and application code. 
               </p>
               <div className="mt-12 justify-center">
-                <Button href="/docs" color="blue" className="rounded-md"><span className='p-2 text-lg'>Get started</span></Button>
+                <Button href="/docs" color="blue" className="rounded-md"><span className='p-2 text-lg'>Get started &rarr;</span></Button>
               </div>
             </div>
           </div>
@@ -109,9 +109,9 @@ export function Hero() {
                 unoptimized
                 priority
               />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg" />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10" />
-              <div className="relative rounded-2xl bg-[#1e293b]/90 dark:bg-[#0A101F]/90 ring-1 ring-white/10 backdrop-blur w-full hidden lg:visible lg:block">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg max-w-screen-2xl" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 max-w-screen-2xl" />
+              <div className="relative rounded-2xl bg-[#1e293b]/90 dark:bg-[#0A101F]/90 ring-1 ring-white/10 backdrop-blur w-full max-w-screen-2xl hidden lg:visible lg:block">
                 <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
                 <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
                 <div className="pl-4 pt-4 ">
@@ -172,6 +172,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   )
 }

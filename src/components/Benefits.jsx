@@ -24,10 +24,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <ArrowPathRoundedSquareIcon className={clsx(iconClassName, 'text-violet-600 dark:text-purple-300 opacity-80')}/>
+        <ArrowPathRoundedSquareIcon className={clsx(iconClassName, 'text-purple-600/80 dark:text-purple-400/95')}/>
       )
     },
-    textColor: 'text-violet-700 dark:text-purple-300 opacity-80'
+    textColor: 'text-purple-600/80 dark:text-purple-400/95'
   },
   {
     id: 'refactor',
@@ -39,10 +39,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <FaceSmileIcon className={clsx(iconClassName, 'text-sky-600 dark:text-sky-300 opacity-80')}/>
+        <FaceSmileIcon className={clsx(iconClassName, 'text-sky-600/70 dark:text-sky-400/80')}/>
       )
     },
-    textColor: 'text-sky-700 dark:text-sky-300 opacity-80',
+    textColor: 'text-sky-600/70 dark:text-sky-400/80',
   },
   {
     id: 'runtime',
@@ -54,10 +54,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <ArrowTrendingDownIcon className={clsx(iconClassName, 'text-pink-600 dark:text-pink-300 opacity-80')}/>
+        <ArrowTrendingDownIcon className={clsx(iconClassName, 'text-pink-500/80 dark:text-fuchsia-500/80')}/>
       )
     },
-    textColor: 'text-pink-700 dark:text-pink-300 opacity-80',
+    textColor: 'text-pink-500/80 dark:text-fuchsia-500/80',
   },  
   {
     id: 'teams',
@@ -69,10 +69,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <UserGroupIcon className={clsx(iconClassName, 'text-sky-600 dark:text-sky-300 opacity-80')}/>
+        <UserGroupIcon className={clsx(iconClassName, 'text-sky-600/70 dark:text-sky-400/80')}/>
       )
     },
-    textColor: 'text-sky-700 dark:text-sky-300 opacity-80',
+    textColor: 'text-sky-600/70 dark:text-sky-400/80',
   },
   {
     id: 'source control',
@@ -84,10 +84,10 @@ const features = [
     },
     icon: function _() {
       return (
-        <CodeBracketIcon className={clsx(iconClassName, 'text-pink-600 dark:text-pink-300 opacity-80')}/>
+        <CodeBracketIcon className={clsx(iconClassName, 'text-pink-500/80 dark:text-fuchsia-500/80')}/>
       )
     },
-    textColor: 'text-pink-700 dark:text-pink-300 opacity-80',
+    textColor: 'text-pink-500/80 dark:text-fuchsia-500/80',
   },
   {
     id: 'work',
@@ -99,10 +99,10 @@ const features = [
     },
     icon: function _() {
         return (
-            <Cog6ToothIcon className={clsx(iconClassName, 'text-violet-600 dark:text-purple-300 opacity-80')}/>
+            <Cog6ToothIcon className={clsx(iconClassName, 'text-purple-600/80 dark:text-purple-400/95')}/>
           )
     },
-    textColor: 'text-violet-700 dark:text-purple-300 opacity-80',
+    textColor: 'text-purple-700/80 dark:text-purple-400/95',
   }
 ]
 
@@ -110,31 +110,34 @@ export function Benefits() {
   return (
     <section
       id="benefits"
-      aria-label="Benefits to using dbExpression"
+      aria-label="Benefits from using dbExpression"
       className="pt-20 sm:pt-32 bg-white dark:bg-slate-900"
     >
-        <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 mx-8 md:mx-16 xl:mx-24 pb-24">
+      <Container className='flex flex-col items-center'>
+        <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 mx-8 md:mx-16 xl:mx-24 pb-24 max-w-screen-2xl">
         {features.map((feature, idx) => (
-            <div key={feature.id} className={clsx(idx % 2 == 0 ? 'bg-gradient-to-br' : 'bg-gradient-to-tl', idx > 2 ? 'xl:bg-gradient-to-tr' : 'xl:bg-gradient-to-bl', 'rounded-2xl shadow-lg shadow-blue-900/20 from-emerald-200/80 via-pink-400/80 to-sky-400/80 dark:from-emerald-100 dark:via-pink-300 dark:to-sky-400 flex flex-col gap-y-6')}>
-               <div className='rounded-2xl bg-white dark:bg-blue-900 opacity-15 m-0.5 h-full'>
-                  <div className='p-16'>
+            <div key={feature.id} className='relative'>
+              <div className={clsx('absolute rounded-2xl inset-0 dark:-inset-0.5 blur-sm dark:blur bg-gradient-to-l from-violet-400/80 via-pink-400/80 to-indigo-400/80 dark:from-fuchsia-800 dark:via-pink-800 dark:to-sky-700', idx % 2 == 0 ? 'lg:bg-gradient-to-r' : 'lg:bg-gradient-to-l')}></div>
+              <div className={clsx('relative rounded-2xl inset-0 bg-white dark:bg-blue-900 h-full')}>                
+                  <div className='p-8'>
                     <div className="flex justify-center">
                       <div className="w-12 h-12">
                           <feature.icon />
                       </div>
                     </div>
-                    <h2 className="py-8 lg:pt-12 font-display text-2xl text-sky-900 text-center">
+                    <h2 className="py-8 lg:pt-12 font-display text-2xl text-center lg:h-24">
                       <span className={clsx('inline-block align-text-top', feature.textColor)}>{feature.summary}</span>
                     </h2>
-                    <div className="md:pt-6 lg:pt-12 text-base text-lg text-slate-600 dark:text-slate-300 text-center">
+                    <div className="pt-12 lg:pt-24 text-base text-lg text-slate-800/80 dark:text-slate-300 text-center">
                       <feature.description />
                     </div>
                   </div>
-                </div>
+                </div>              
             </div>
           ))
           }
-        </div>
+          </div>
+        </Container>
     </section>
   )
 }

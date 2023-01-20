@@ -42,7 +42,7 @@ export function PrimaryFeatures() {
   return (
     <section
       id='features'
-      aria-label='dbExpression Features'
+      aria-label='Features for simplifying Microsoft SQL Server'
       className='relative dark:bg-slate-900 pt-14 pb-28 sm:py-20 bg-white-100'
     >     
     <div className='swiper-container dark:swiper-container-dark px-8'>
@@ -58,16 +58,16 @@ export function PrimaryFeatures() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className='swiper h-full w-full'
+        className='swiper h-full max-w-screen-2xl'
       >
         {features.map((feature) => (
             <SwiperSlide 
               key={feature.title} className='py-16 bg-white dark:bg-slate-900' 
               data-swiper-autoplay={feature.timeToRead * 1000}
             >
-              <div className='text-center w-full justify-center bg-white dark:bg-transparent shadow-lg shadow-blue-900/20 rounded-lg dark:shadow-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900'>
-                <h2 className='pt-12 font-display text-3xl tracking-tight text-slate-700 dark:text-white md:text-4xl'><span>{feature.title}</span></h2>
-                <div className='h-56 md:h-32 lg:h-36 px-8 md:px-24 lg:px-36 py-6 md:py-8 lg:py-12 text-xl text-lg text-slate-600 dark:text-slate-300 text-center'>{feature.description}</div>
+              <div className='text-center w-full justify-center bg-white dark:bg-transparent shadow-lg shadow-blue-900/20 rounded-lg dark:shadow-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-white to-sky-50/70 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900'>
+                <h2 className='pt-24 dark:pt-12 font-display text-3xl tracking-tight text-slate-900 dark:text-white md:text-4xl'><span>{feature.title}</span></h2>
+                <div className='h-56 md:h-32 lg:h-36 px-8 md:px-24 lg:px-36 py-6 md:py-8 lg:py-12 text-xl text-lg text-slate-900/80 dark:text-slate-300 text-center'>{feature.description}</div>
                 <div className='h-[calc(40vh-80px)] xl:h-[calc(75vh-128px)]'>
                   <Image
                     className='rounded-b-lg dark:rounded-lg object-left'
