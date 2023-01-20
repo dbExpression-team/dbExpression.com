@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Container } from '@/components/Container'
+import clsx from 'clsx'
 
 const features = [
   {
@@ -109,36 +110,41 @@ export function SecondaryFeatures() {
   return (
     <section
       id="secondary-features"
-      aria-label="Features for simplifying Microsoft SQL Server"
+      aria-label="Additioanal features for simplifying Microsoft SQL Server"
       className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32 bg-white dark:bg-slate-900"
     >
-      <Container>
-        <div className="mx-auto max-w-3xl text-center mb-20">
+      <div className='flex flex-col items-center'>
+        <div className="mx-auto max-w-3xl text-center mb-32">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Microsoft SQL Server. Simplified.
           </h2>
         </div>
-        <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-4 gap-16 mx-8 md:mx-16 lg:mx-24">
+        <div className="grid grid-rows-1 lg:grid-cols-2 xl:grid-cols-4 gap-16 mx-8 md:mx-16 lg:mx-24 max-w-screen-2xl">
         {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col gap-y-6 pb-24 lg:pb-0 rounded-xl bg-white dark:bg-blue-900 shadow-lg shadow-blue-900/20 dark:ring-2 dark:ring-inset dark:ring-white/20">
-                <div className="flex justify-center p-8 py-16 xdark:bg-white/90 rounded-t-xl">
-                  <Link href={feature.url} alt={feature.summary} className=''>
-                    <svg className="h-12 w-12 py-1 px-1 hover:h-13 hover:w-13 hover:py-0 hover:px-0 fill-current dark:text-red-500" fill="none">
-                      <feature.icon />
-                    </svg>
-                  </Link>
+            <div key={feature.id} className="relative">
+              <div className='absolute rounded-2xl inset-0 dark:-inset-0.5 blur-sm dark:blur bg-slate-300 dark:bg-slate-600'></div>
+              <div className='relative rounded-2xl inset-0 bg-white dark:bg-blue-900 h-full w-full justify-center'>
+                <div className='flex flex-col items-center'>
+                  <div className='p-12'>
+                    <Link href={feature.url} alt={feature.summary} className=''>
+                      <svg className="h-12 w-12 py-1 px-1 hover:h-13 hover:w-13 hover:py-0 hover:px-0 fill-current dark:text-red-500" fill="none">
+                        <feature.icon />
+                      </svg>
+                    </Link>
+                  </div>              
+                  <h3 className="m-4 xlg:m-8 font-display text-xl text-slate-900 dark:text-white text-center lg:h-24">
+                      <span className="inline-block align-text-base">{feature.summary}</span>
+                  </h3>                  
+                  <div className="mx-8 py-8 xl:pb-12 text-base text-lg text-slate-800/80 dark:text-slate-300 text-center lg:mt-8 xxl:mt-16">
+                      {feature.description}
+                  </div>
                 </div>
-                <h3 className="px-8 font-display text-xl lg:text-2xl text-slate-900 dark:text-white text-center h-12">
-                    <span className="inline-block align-text-top">{feature.summary}</span>
-                </h3>
-                <div className="px-8 py-8 text-base text-lg text-slate-600 dark:text-slate-300 text-center lg:mt-24 xl:mt-8">
-                    {feature.description}
-                </div>
+              </div>
             </div>
           ))
           }
         </div>
-      </Container>
+      </div>
     </section>
   )
 }
