@@ -1,7 +1,7 @@
 import dark from '@/images/logos/dark/dbex-and-icon.png'
 import light from '@/images/logos/light/dbex-and-icon.png'
-import Image from 'next/future/image'
 import clsx from 'clsx'
+import Image from 'next/image'
 
 export function Logo({
     className,

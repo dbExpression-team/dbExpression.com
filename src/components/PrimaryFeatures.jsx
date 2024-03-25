@@ -1,6 +1,6 @@
-import Image from 'next/future/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
+import Image from 'next/image'
 
 import fluentSqlStatement from '@/images/screenshots/fluent-sql-statements.gif'
 import intellisenseWithDatabaseAttributes from '@/images/screenshots/intellisense-with-database-attributes.png'

@@ -43,6 +43,7 @@ function MobileNavIcon({ open }) {
 }
 
 function MobileNavigation() {
+  const docsUrl = process.env.NEXT_PUBLIC_DOCS_URL
   return (
     <Popover>
       <Popover.Button
@@ -77,8 +78,8 @@ function MobileNavigation() {
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="/docs">Read the Docs</MobileNavLink>
-            <MobileNavLink href="/docs">Get Started</MobileNavLink>
+            <MobileNavLink href={docsUrl}>Read the Docs</MobileNavLink>
+            <MobileNavLink href={docsUrl}>Get Started</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -87,6 +88,7 @@ function MobileNavigation() {
 }
 
 export function Header() {
+  const docsUrl = process.env.NEXT_PUBLIC_DOCS_URL
   return (
     <header className='bg-transparent border border-b dark:border-b-none'>
       <Container>
@@ -99,7 +101,7 @@ export function Header() {
               <NavLink href="#features">How will it help me?</NavLink>
             </div>
             <div className="hidden md:block mr-12">
-              <NavLink href="/docs" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
+              <NavLink href={docsUrl} alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

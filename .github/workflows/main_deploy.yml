@@ -44,17 +44,18 @@ jobs:
         run: |
           touch .env.local
           echo NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID >> .env.local
-          echo DOCS_URL=$DOCS_URL >> .env.local
+          echo NEXT_PUBLIC_DOCS_URL=$DOCS_URL >> .env.local
 
       - name: Install dependencies and build
         run: |
           npm install
-          npm run build
+          npx next build
+          npx next export
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ./out
 
   # Deployment job
   deploy:
