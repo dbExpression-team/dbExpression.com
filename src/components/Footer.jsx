@@ -5,6 +5,7 @@ import { Logo } from '@/components/Logo'
 import { Button } from '@/components/Button'
 
 export function Footer() {
+  const docsUrl = process.env.NEXT_PUBLIC_DOCS_URL
   return (
     <footer className="bg-slate-50 dark:bg-slate-900 pt-12">
       <Container>
@@ -23,7 +24,7 @@ export function Footer() {
         <div className="grid grid-cols-2 items-center border-t border-slate-400/10 py-4 sm:flex-row sm:justify-between">
           <div>
             <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-              Copyright &copy; {new Date().getFullYear()} HatTrick Labs, LLC. All rights
+              Copyright &copy; {new Date().getFullYear()} dbExpression. All rights
               reserved.
             </p>
           </div>
@@ -35,11 +36,11 @@ export function Footer() {
               <NavLink href="#features" className="hover:text-slate-800">How will it help me?</NavLink>
             </div>
             <div className="hidden md:block">
-              <NavLink href="https://docs.dbexpression.com" className="hover:text-slate-800" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
+              <NavLink href={docsUrl} className="hover:text-slate-800" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
             </div>
             <div className="ml-12">
               <Link
-                href="https://github.com/HatTrickLabs/dbExpression"
+                href="https://github.com/dbexpression-team/dbExpression"
                 className="group"
                 aria-label="dbExpression on GitHub"
               >

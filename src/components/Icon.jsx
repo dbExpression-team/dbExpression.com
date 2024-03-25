@@ -1,5 +1,4 @@
 import icon from '@/images/logos/db-logo-on-dark.png'
-import Image from 'next/future/image'
 import clsx from 'clsx'
 
 export function Icon({

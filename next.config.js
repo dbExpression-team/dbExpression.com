@@ -1,37 +1,11 @@
-const { DOCS_URL } = process.env
+const { NEXT_PUBLIC_DOCS_URL } = process.env
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
+  basePath: "/dbExpression.com",
   reactStrictMode: true,
-  experimental: {
-    newNextLinkBehavior: true,
-    scrollRestoration: true
-  },
-  async redirects() {
-    return [
-      {
-        source: '/rtd/:slug*',
-        destination: '/docs/:slug*',
-        permanent: false
-      }
-    ]
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/:path*',
-        destination: `/:path*`,
-      },
-      {
-        source: '/docs',
-        destination: `${DOCS_URL}/docs`
-      },
-      {
-        source: '/docs/:path*',
-        destination: `${DOCS_URL}/docs/:path*`
-      }
-    ]
-  },
+  images: { unoptimized: true },
 }
 
 module.exports = nextConfig

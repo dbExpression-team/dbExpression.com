@@ -95,7 +95,7 @@ const features = [
   },
   {
     id: 'GitHub',
-    url: 'https://github.com/HatTrickLabs/dbExpression',
+    url: 'https://github.com/dbexpression-team/dbExpression',
     summary: 'Source on GitHub',
     description: 'dbExpression is open source under the Apache 2.0 license.',
     icon: function GithubIcon() {
