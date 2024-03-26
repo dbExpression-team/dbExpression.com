@@ -36,7 +36,7 @@ export function Footer() {
               <NavLink href="#features" className="hover:text-slate-800">How will it help me?</NavLink>
             </div>
             <div className="hidden md:block">
-              <NavLink href={docsUrl} className="hover:text-slate-800" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
+              <NavLink href="/docs" className="hover:text-slate-800" alt="Read the Docs" aria-label="Read the Docs">Read the Docs</NavLink>
             </div>
             <div className="ml-12">
               <Link
