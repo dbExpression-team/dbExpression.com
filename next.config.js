@@ -1,4 +1,4 @@
-const { DOCS_URL } = process.env
+const { NEXT_PUBLIC_DOCS_URL } = process.env
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,11 +20,11 @@ const nextConfig = {
       },
       {
         source: '/docs',
-        destination: `${DOCS_URL}/docs`
+        destination: `${NEXT_PUBLIC_DOCS_URL}/docs`
       },
       {
         source: '/docs/:path*',
-        destination: `${DOCS_URL}/docs/:path*`
+        destination: `${NEXT_PUBLIC_DOCS_URL}/docs/:path*`
       }
     ]
   },
