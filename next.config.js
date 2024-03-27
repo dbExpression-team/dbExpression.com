@@ -20,11 +20,11 @@ const nextConfig = {
       },
       {
         source: '/docs',
-        destination: `${NEXT_PUBLIC_DOCS_URL}`
+        destination: `${NEXT_PUBLIC_DOCS_URL}/docs`
       },
       {
         source: '/docs/:path*',
-        destination: `${NEXT_PUBLIC_DOCS_URL}/:path*`
+        destination: `${NEXT_PUBLIC_DOCS_URL}/docs/:path*`
       }
     ]
   },
